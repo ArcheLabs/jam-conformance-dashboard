@@ -4,18 +4,14 @@ on:
   push:
     branches: [ main ]
   schedule:
-    # Run every hour to sync latest data
-    - cron: '0 * * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -26,45 +22,54 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    
-    - name: Clone jam-conformance repository
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install Python dependencies
       run: |
-        git clone https://github.com/davxy/jam-conformance.git temp-jam-conformance
-    
-    - name: Copy benchmark data and capture source info
-      run: |
-        rm -rf ../fuzz-perf ../fuzz-reports
-        cp -r temp-jam-conformance/fuzz-perf ../
-        cp -r temp-jam-conformance/fuzz-reports ../
-        node scripts/capture-source-info.js
-        rm -rf temp-jam-conformance
-    
-    - name: Install dependencies
+        pip install playwright aiohttp pyyaml
+        python -m playwright install chromium
+
+    - name: Install Node dependencies
       run: npm ci
-    
+
     - name: Generate data files
       run: npm run update-all-data
 
+    - name: Commit generated data
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data/reports.yaml data/evaluations.json data/normalized data/raw/reports/metadata.json data/raw/reports/failures.json src/data
+        if ! git diff --cached --quiet; then
+          git commit -m "Update generated evaluation data [skip ci]"
+          git push
+        else
+          echo "No generated data changes to commit"
+        fi
+
     - name: Build project
       run: npm run build
-    
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./out
-    
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4

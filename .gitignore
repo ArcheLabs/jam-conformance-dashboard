@@ -44,3 +44,8 @@ next-env.d.ts
 /src/data/aggregated-data.json
 /src/data/all-benchmarks-data.json
 /src/data/source-info.json
+
+# raw report inputs stay local; CI downloads only missing reports
+/data/raw/reports/*.zip
+!/data/raw/reports/metadata.json
+!/data/raw/reports/failures.json

@@ -1,205 +1,146 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { LeaderboardTable } from '@/components/LeaderboardTable';
-import { AuditTimeCalculator } from '@/components/AuditTimeCalculator';
-import { PerformanceChartEnhanced } from '@/components/PerformanceChartEnhanced';
-import { VersionSelector } from '@/components/VersionSelector';
 import { BenchmarkTabs } from '@/components/BenchmarkTabs';
-import { BenchmarkHeatmap } from '@/components/BenchmarkHeatmap';
-import { BenchmarkInfo } from '@/components/BenchmarkInfo';
 import { MethodologyExplainer } from '@/components/MethodologyExplainer';
-import { Info } from 'lucide-react';
-import allBenchmarksData from '@/data/all-benchmarks-data.json';
-import aggregatedData from '@/data/aggregated-data.json';
-import clientMetadata from '@/data/client-metadata.json';
-import sourceInfo from '@/data/source-info.json';
+import { PerformanceChartEnhanced } from '@/components/PerformanceChartEnhanced';
+import { Info, BarChart3 } from 'lucide-react';
+import leaderboardData from '@/data/leaderboard.json';
 import { APP_CONFIG } from '@/config';
-import { enrichTeamWithMetadata } from '@/lib/team-utils';
+import { LeaderboardData } from '@/types/performance';
+
+const data = leaderboardData as unknown as LeaderboardData;
 
 export default function Home() {
-  const versions = Object.keys(aggregatedData).sort().reverse();
-  const [currentVersion, setCurrentVersion] = useState(versions[0] || APP_CONFIG.defaultVersion);
-  const [currentBenchmark, setCurrentBenchmark] = useState(''); // No benchmark selected by default - show main leaderboard
+  const [currentTab, setCurrentTab] = useState('');
 
-  // Get the base path for assets
   const basePath = APP_CONFIG.paths.basePath;
+  const baselineTeam = data.teams[0];
 
-  useEffect(() => {
-    // Reset to overview when version changes
-    setCurrentBenchmark('');
-  }, [currentVersion]);
-  
-  // Use aggregated data for overview
-  const overviewData = aggregatedData[currentVersion as keyof typeof aggregatedData] || aggregatedData[APP_CONFIG.defaultVersion as keyof typeof aggregatedData];
-  const fastestTeam = overviewData.teams[0];
-  const baselineTeam = overviewData.teams.find(t => t.name === overviewData.baseline);
-  const slowestTeam = overviewData.teams[overviewData.teams.length - 1];
-  
-  // Enrich team data with metadata
-  const enrichedTeams = overviewData.teams.map((team: any) => enrichTeamWithMetadata(team));
-  
-  // Check if we have benchmark data for current version
-  const hasBenchmarkData = (allBenchmarksData as any)[currentVersion] && Object.keys((allBenchmarksData as any)[currentVersion]).length > 0;
-  
+  const filteredTeams = () => {
+    if (!currentTab) return data.teams;
+    return data.teams
+      .filter(t => t.lanes[currentTab])
+      .sort((a, b) => {
+        const sa = a.lanes[currentTab].p50 ?? a.lanes[currentTab].p90 ?? Infinity;
+        const sb = b.lanes[currentTab].p50 ?? b.lanes[currentTab].p90 ?? Infinity;
+        return sa - sb;
+      })
+      .map((t, i) => ({ ...t, rank: i + 1 }));
+  };
+
   return (
     <main className="min-h-screen" style={{ backgroundImage: `url(${basePath}${APP_CONFIG.paths.backgroundImage})`, backgroundRepeat: 'repeat', backgroundSize: '1024px 1059px', backgroundColor: '#000000' }}>
-      {/* Background effects */}
-      
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-12">
-          {/* Header with Version Selector */}
+          {/* Header - left aligned as original */}
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
             <div className="text-center md:text-left mb-6 md:mb-0">
               <h1 className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tighter">
                 JAM
               </h1>
               <p className="text-lg md:text-xl text-slate-400 font-light tracking-wide uppercase">
-                Conformance Performance
+                M1 Conformance Evaluation Performance
               </p>
-            </div>
-            <div className="flex-shrink-0">
-              <VersionSelector
-                versions={versions}
-                currentVersion={currentVersion}
-                onVersionChange={setCurrentVersion}
-              />
             </div>
           </div>
 
-          {/* Only show benchmark tabs if we have benchmark data */}
-          {hasBenchmarkData && (
-            <div className="mb-8">
-              <BenchmarkTabs 
-                currentBenchmark={currentBenchmark} 
-                onBenchmarkChange={setCurrentBenchmark} 
-              />
-            </div>
-          )}
+          {/* Tabs */}
+          <div className="mb-8">
+            <BenchmarkTabs
+              currentBenchmark={currentTab}
+              onBenchmarkChange={setCurrentTab}
+            />
+          </div>
 
-          {/* Conditional Content based on selected benchmark */}
-          {!currentBenchmark || !hasBenchmarkData ? (
-            /* Regular Overview - Default main leaderboard view */
+          {/* Overview: Info box + Chart */}
+          {!currentTab && (
             <>
-              {/* Info Box */}
               <div className="mb-8 p-4 bg-white/5 border border-white/10 rounded-lg">
                 <div className="flex items-start gap-3">
                   <Info className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-slate-300">
                     <p className="font-semibold text-white mb-1">Important Note</p>
-                    <p>This leaderboard highlights performance differences between JAM implementations. 
-                    All implementations are works in progress and none are fully conformant yet. 
+                    <p>This leaderboard highlights performance differences between JAM implementations.
+                    All implementations are works in progress and none are fully conformant yet.
                     The rankings serve to track relative performance improvements over time.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Performance Chart at the top */}
               <div className="mb-12">
-                <PerformanceChartEnhanced teams={enrichedTeams} baseline={overviewData.baseline} timestamp={overviewData.timestamp} />
-              </div>
-
-              {/* Main Content */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                <div className="lg:col-span-2">
-                  <LeaderboardTable teams={enrichedTeams} baseline={overviewData.baseline} />
-                </div>
-                
-                <div className="lg:col-span-1">
-                  <AuditTimeCalculator teams={enrichedTeams} baseline={overviewData.baseline} />
-                </div>
-              </div>
-
-              {/* Methodology Explainer - Full Width */}
-              <div className="w-full">
-                <MethodologyExplainer methodology={overviewData.methodology} />
+                <PerformanceChartEnhanced teams={data.teams} baselineTeam={baselineTeam} />
               </div>
             </>
-          ) : currentBenchmark === 'heatmap' ? (
-            /* Benchmark Heatmap View */
-            <div className="mb-12">
-              <BenchmarkHeatmap 
-                benchmarkData={(allBenchmarksData as any)[currentVersion]} 
-                version={currentVersion}
-              />
-            </div>
-          ) : (allBenchmarksData as any)[currentVersion]?.[currentBenchmark] ? (
-            /* Individual Benchmark View */
+          )}
+
+          {/* Lane view: description + chart */}
+          {currentTab && (
             <>
-              {/* Benchmark Description */}
-              <BenchmarkInfo benchmark={currentBenchmark} />
-              
-              {/* Performance Chart for specific benchmark */}
+              {(() => {
+                const descs: Record<string, { name: string; desc: string }> = {
+                  L2a: { name: 'L2a — Mutations (Tiny)', desc: 'Import with mutations and error handling, without Safrole.' },
+                  L2b: { name: 'L2b — Mutations (Full)', desc: 'Import with mutations and error handling, without Safrole.' },
+                  L3a: { name: 'L3a — Safrole (validators-management)', desc: 'Exercise Safrole with validators-management workload, no mutations.' },
+                  L3b: { name: 'L3b — Safrole (empty)', desc: 'Exercise Safrole with empty workload, no mutations.' },
+                };
+                const info = descs[currentTab];
+                if (!info) return null;
+                return (
+                  <div className="mb-8 p-4 bg-white/5 border border-white/10 rounded-lg">
+                    <div className="flex items-start gap-3">
+                      <BarChart3 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                      <div className="text-sm text-slate-300">
+                        <p className="font-semibold text-white mb-1">{info.name}</p>
+                        <p>{info.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
               <div className="mb-12">
-                <PerformanceChartEnhanced 
-                  teams={(allBenchmarksData as any)[currentVersion][currentBenchmark].teams.map((team: any) => enrichTeamWithMetadata(team))} 
-                  baseline={(allBenchmarksData as any)[currentVersion][currentBenchmark].baseline}
-                  timestamp={(allBenchmarksData as any)[currentVersion][currentBenchmark].timestamp} 
-                />
-              </div>
-              
-              {/* Main Content for specific benchmark */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2">
-                  <LeaderboardTable 
-                    teams={(allBenchmarksData as any)[currentVersion][currentBenchmark].teams.map((team: any) => enrichTeamWithMetadata(team))} 
-                    baseline={(allBenchmarksData as any)[currentVersion][currentBenchmark].baseline} 
-                  />
-                </div>
-                
-                <div className="lg:col-span-1">
-                  <AuditTimeCalculator 
-                    teams={(allBenchmarksData as any)[currentVersion][currentBenchmark].teams.map((team: any) => enrichTeamWithMetadata(team))} 
-                    baseline={(allBenchmarksData as any)[currentVersion][currentBenchmark].baseline} 
-                  />
-                </div>
+              <PerformanceChartEnhanced
+                teams={filteredTeams()}
+                lane={currentTab}
+                baselineTeam={baselineTeam}
+              />
               </div>
             </>
-          ) : null}
+          )}
+
+          {/* Table */}
+          <div className="mb-12">
+            <LeaderboardTable teams={filteredTeams()} currentTab={currentTab} />
+          </div>
+
+          {/* Methodology */}
+          {!currentTab && (
+            <div className="w-full">
+              <MethodologyExplainer scoring={data.scoring} />
+            </div>
+          )}
 
           {/* Footer */}
           <div className="mt-16 text-center text-sm text-slate-500">
             <p>
-              Performance data updated regularly. Version: {currentVersion}
-              {overviewData.timestamp && (
-                <span className="ml-2">
-                  | Last updated: {new Date(overviewData.timestamp).toLocaleString('en-US', { 
-                    dateStyle: 'medium', 
-                    timeStyle: 'short' 
-                  })}
-                </span>
-              )}
-              {sourceInfo.source?.commitDate && sourceInfo.source.commitHash !== 'placeholder' && (
-                <span className="ml-2">
-                  | Source data from: {new Date(sourceInfo.source.commitDate).toLocaleString('en-US', { 
-                    dateStyle: 'medium' 
-                  })}
-                </span>
-              )}
+              Methodology v{data.methodology_version} | Lanes: {data.lanes.join(', ')}
             </p>
             <p className="mt-2">
-              Testing protocol conformance at scale. Learn more at{' '}
-              <a 
-                href={APP_CONFIG.externalLinks.jamConformance} 
+              Data generated: {data.generated_at?.split('T')[0] || '-'}
+            </p>
+            <p className="mt-2">
+              <a
+                href={APP_CONFIG.externalLinks.jamConformance}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 jam-conformance
               </a>
-              {' '}|{' '}
-              <a 
-                href={sourceInfo.source?.sourceUrl || `${APP_CONFIG.externalLinks.jamConformance}/commits/main`} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                title={sourceInfo.source?.commitMessage || 'View latest commits'}
-              >
-                {sourceInfo.source?.commitHash ? `Commit ${sourceInfo.source.commitHash.slice(0, 7)}` : 'Latest commits'}
-              </a>
-              {' '}|{' '}
-              <a 
-                href={APP_CONFIG.externalLinks.graypaperClients} 
+              {' | '}
+              <a
+                href={APP_CONFIG.externalLinks.graypaperClients}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"

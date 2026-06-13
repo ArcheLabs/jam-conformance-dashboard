@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Box, Database, Layers, Grid3x3 } from 'lucide-react';
+import { Activity, Layers, BarChart3, Box, Database } from 'lucide-react';
 
 interface BenchmarkTabsProps {
   currentBenchmark: string;
@@ -10,12 +9,11 @@ interface BenchmarkTabsProps {
 }
 
 const benchmarks = [
-  { id: '', name: 'Overview', icon: Activity, description: 'Overall performance' },
-  { id: 'heatmap', name: 'Heatmap', icon: Grid3x3, description: 'Benchmark comparison' },
-  { id: 'safrole', name: 'Safrole', icon: Box, description: 'Core protocol operations' },
-  { id: 'fallback', name: 'Fallback', icon: Layers, description: 'Fallback mechanism' },
-  { id: 'storage', name: 'Storage', icon: Database, description: 'Storage operations' },
-  { id: 'storage_light', name: 'Storage Light', icon: Database, description: 'Light storage mode' },
+  { id: '', name: 'Overview', icon: Activity, description: 'Overall leaderboard' },
+  { id: 'L2a', name: 'L2a', icon: Layers, description: 'Tiny spec — import with mutations, without Safrole' },
+  { id: 'L2b', name: 'L2b', icon: BarChart3, description: 'Full spec — import with mutations, without Safrole' },
+  { id: 'L3a', name: 'L3a', icon: Box, description: 'Tiny spec — Safrole with validators-management workload, no mutations' },
+  { id: 'L3b', name: 'L3b', icon: Database, description: 'Full spec — Safrole with empty workload, no mutations' },
 ];
 
 export function BenchmarkTabs({ currentBenchmark, onBenchmarkChange }: BenchmarkTabsProps) {
@@ -24,7 +22,7 @@ export function BenchmarkTabs({ currentBenchmark, onBenchmarkChange }: Benchmark
       {benchmarks.map((benchmark) => {
         const Icon = benchmark.icon;
         const isActive = currentBenchmark === benchmark.id;
-        
+
         return (
           <button
             key={benchmark.id}
@@ -32,8 +30,8 @@ export function BenchmarkTabs({ currentBenchmark, onBenchmarkChange }: Benchmark
             className={`
               relative flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm
               transition-all duration-200
-              ${isActive 
-                ? 'bg-white/10 text-white border border-white/20' 
+              ${isActive
+                ? 'bg-white/10 text-white border border-white/20'
                 : 'text-slate-400 hover:text-white hover:bg-white/5'
               }
             `}

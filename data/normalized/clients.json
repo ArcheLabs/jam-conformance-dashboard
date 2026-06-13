@@ -1,0 +1,146 @@
+[
+  {
+    "team_id": "0x8e851ed992228f2268ee8c614fe6075d3800060ae14098e0309413a0a81c4470",
+    "team_h160": "0xa6ac5c9f16a22864c5656f147527f2b4dc8f865a",
+    "team_name": "Boka",
+    "client_name": "Boka",
+    "language": "Swift",
+    "language_color": "#ffac45"
+  },
+  {
+    "team_id": "0xd0aeff4eb24e4b81c7b4b12b542da7dc78909062b2bce2bb211e414d99508102",
+    "team_h160": "0xf9059b6fa9319a16cad9f75eec169be0e887a936",
+    "team_name": "FastRoll",
+    "client_name": "FastRoll",
+    "language": "Rust",
+    "language_color": "#dea584"
+  },
+  {
+    "team_id": "0x866d1837675e6c261632fc872c66e779df05bca99fed82db1f5cc4c329beb520",
+    "team_h160": "0x9c69aaee6979a2f1b778b96e7808b803e5ac6e2d",
+    "team_name": "Gossamer-Jam",
+    "client_name": "Gossamer-Jam",
+    "language": "Go",
+    "language_color": "#00add8"
+  },
+  {
+    "team_id": "0x4a88912aadd2b981a2c472731f696ae05d8274bfe77c18957fac97b52ac0f761",
+    "team_h160": "0x86f51fb5f7b2a699d8b98d1aaa4a251ce0fd52b4",
+    "team_name": "ArcheLabs",
+    "client_name": "Jambda",
+    "language": "Rust",
+    "language_color": "#dea584"
+  },
+  {
+    "team_id": "0xe6b912626c9dfa3cd9e65b4412b19eb9d123edb1aa22d492a58a88091c483a7a",
+    "team_h160": "0x8e110f4a140dff596f789bdd3c48348e95bc42a1",
+    "team_name": "JamDuna",
+    "client_name": "JamDuna",
+    "language": "Go",
+    "language_color": "#00add8"
+  },
+  {
+    "team_id": "0x8c00226393a2a05d5d65bf7590e3c091feb897f8303a7de52cd637106dee2b37",
+    "team_h160": "0x831e2edc07028439c04d6725d56e1c8fda152883",
+    "team_name": "JamForge",
+    "client_name": "JamForge",
+    "language": "Scala",
+    "language_color": "#c22d40"
+  },
+  {
+    "team_id": "0x1c29671fc7140b513379355ecf0d94bf4ad1cada3ef94537c98fe68f59869700",
+    "team_h160": "0x2c9a00d8612f2fdaee43af876ab4d48872f7b58c",
+    "team_name": "JamZig",
+    "client_name": "JamZig",
+    "language": "Zig",
+    "language_color": "#ec915c"
+  },
+  {
+    "team_id": "0xfa6a0cb290729b119117d01854e8dc5bac29dbab75729a5c5b5ba20c7baef24b",
+    "team_h160": "0x568779a360c9846da0caef154e260e6984f8fc82",
+    "team_name": "Jamzilla",
+    "client_name": "Jamzilla",
+    "language": "Go",
+    "language_color": "#00add8"
+  },
+  {
+    "team_id": "0xb0a08173d9322251d85475ae44c1325bfbb0254f20318b0aade97b250af5c010",
+    "team_h160": "0x0b3335dda1dd0b0d6a2505ffb69fd86f1715617b",
+    "team_name": "JavaJAM",
+    "client_name": "JavaJAM",
+    "language": "Java",
+    "language_color": "#b07219"
+  },
+  {
+    "team_id": "0x0008517a2b659ede1bead47f3eec782af7b961ebb957584df3c0573bb2618a06",
+    "team_h160": "0xe421b35bb0ba7ff60eddeca6f872185e3b404036",
+    "team_name": "JOTL",
+    "client_name": "JOTL",
+    "language": "Common Lisp",
+    "language_color": "#3fb68b"
+  },
+  {
+    "team_id": "0x5aeca04cbfb8a394affd315683f506b40047ace3f626477f21d1af14a6f41e66",
+    "team_h160": "0xd329dd56b803ea42486839d9a7ef1cd19a202021",
+    "team_name": "New Jamneration",
+    "client_name": "New Jamneration",
+    "language": "Go",
+    "language_color": "#00add8"
+  },
+  {
+    "team_id": "0xc6d054f89721795d9ca72e95a3dd476820cd380f577fd9ab4b835a510e75800a",
+    "team_h160": "0x8a484234b22a7a28b4f3b63bb6352d1e64efa862",
+    "team_name": "PBNJam",
+    "client_name": "PBNJam",
+    "language": "TypeScript",
+    "language_color": "#3178c6"
+  },
+  {
+    "team_id": "0xcefbf7cfe1ffa3a8eb3af4bbf220281a230b3d075bd9842c9cae84b6e1fc5b13",
+    "team_h160": "0x4c48880cc6fd85059fd8e3458412186c441f0acc",
+    "team_name": "PyJAMaz",
+    "client_name": "PyJAMaz",
+    "language": "Python",
+    "language_color": "#3572A5"
+  },
+  {
+    "team_id": "0x4c448aa63cefe8ca36ce65ef0e8a8a8c4186d68b905eaf79468f90d6ead9707a",
+    "team_h160": "0xaed67b06a9213c7341e85437adcc92ff15d37141",
+    "team_name": "SpaceJam",
+    "client_name": "SpaceJam",
+    "language": "Rust",
+    "language_color": "#dea584"
+  },
+  {
+    "team_id": "0x32f20e693fc2129fa0b8787e77087ba0797eeae4639296ff9db6360e6460a136",
+    "team_h160": "0xa350515fbb587a0bb844b916e6a8a97a7fcf670e",
+    "team_name": "Tessera",
+    "client_name": "Tessera",
+    "language": "Python",
+    "language_color": "#3572A5"
+  },
+  {
+    "team_id": "0x988068f9f4a32beb4122c7fe8f3ecd2fb42339682511cbbc6f82cc4e6ef89b25",
+    "team_h160": "0xb0de5a0bbeaac86419525e65c58ab9835deb7535",
+    "team_name": "TurboJAM",
+    "client_name": "TurboJAM",
+    "language": "C++",
+    "language_color": "#f34b7d"
+  },
+  {
+    "team_id": "0x6cea49eaad9b65996e49f557e7e10afb2a7c9e935c69e1b8d384caa632baf83c",
+    "team_h160": "0xbecc3bbdc74a2ba4998860acda5806008ac9b441",
+    "team_name": "Typeberry",
+    "client_name": "Typeberry",
+    "language": "TypeScript",
+    "language_color": "#3178c6"
+  },
+  {
+    "team_id": "0x284f936995ce2a5e402189e2c9d58225e225101e753faad7bcf1455df10a9419",
+    "team_h160": "0x0675e5d195afec94bba1cdc3c0450b88445e53f1",
+    "team_name": "VinWolf",
+    "client_name": "VinWolf",
+    "language": "Rust",
+    "language_color": "#dea584"
+  }
+]

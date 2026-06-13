@@ -7,12 +7,14 @@
     "build": "next build",
     "build:full": "npm run update-all-data && next build",
     "start": "next start",
-    "generate-all-benchmarks": "node scripts/generate-all-benchmarks-data.js",
-    "generate-aggregated": "node scripts/generate-aggregated-data.js",
-    "capture-source-info": "node scripts/capture-source-info.js",
-    "update-all-data": "npm run generate-all-benchmarks && npm run generate-aggregated"
+    "collect": "python scripts/collect_evaluations.py --refresh-notion --no-download",
+    "normalize": "python scripts/normalize_reports.py",
+    "build-data": "python scripts/build_frontend_data.py",
+    "report": "python scripts/report_summary.py",
+    "update-all-data": "npm run collect && npm run normalize && npm run build-data && npm run report"
   },
   "dependencies": {
+    "@polkadot/api": "^16.5.6",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.542.0",
