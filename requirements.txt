@@ -1,0 +1,4 @@
+aiohttp
+playwright
+pyyaml
+requests
