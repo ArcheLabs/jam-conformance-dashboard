@@ -17,7 +17,7 @@ export const APP_CONFIG = {
   },
 
   paths: {
-    basePath: process.env.NODE_ENV === 'production' ? '/jam-conformance-dashboard' : '',
+    basePath: (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, ''),
     backgroundImage: '/background.webp',
   },
 };

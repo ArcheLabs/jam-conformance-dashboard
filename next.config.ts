@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '');
 
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Only apply basePath and assetPrefix in production
-  ...(isProd && {
-    basePath: '/jam-conformance-dashboard',
-    assetPrefix: '/jam-conformance-dashboard/',
+  ...(basePath && {
+    basePath,
+    assetPrefix: `${basePath}/`,
   }),
 };
 
