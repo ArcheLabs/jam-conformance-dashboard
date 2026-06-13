@@ -1,5 +1,23 @@
 [
   {
+    "attestation": "0x70bcb397b0e6614c1de27691f6dcfe0bd50992e31db09ae061b58efb4f2878a2",
+    "team_name": "18",
+    "report_url": "https://fuzz.jamtoaster.network/api/suites/d3a5503a88fe7c0dc1a02960b1fa4121/report.zip",
+    "expected_sha256": "0x84c20286fb75bb516112d7794a09847995ac1c1b27c439214dbca2ce37010943",
+    "downloaded_at": "2026-06-13T14:29:57",
+    "source": "notion",
+    "sha256": "0x84c20286fb75bb516112d7794a09847995ac1c1b27c439214dbca2ce37010943",
+    "zip_size": 61948938,
+    "file_count": 34,
+    "lane_dirs": [
+      "L2a",
+      "L2b",
+      "L3a",
+      "L3b"
+    ],
+    "has_manifest": true
+  },
+  {
     "attestation": "0xcc2b5c56a99faba23060b5e0b68b66907bbe293558715959056f5eb7b8bac498",
     "team_name": "Boka",
     "report_url": "https://fuzz.jamtoaster.network/api/suites/621cd8b9c90e6391befdc8012efa0a78/report.zip",
@@ -93,6 +111,24 @@
     "sha256": "0xefd21ceec0059a48c7aa62ea3598a3a09aa1773614a1b86debb6f1ad1cdce0dc",
     "zip_size": 82393527,
     "file_count": 39,
+    "lane_dirs": [
+      "L2a",
+      "L2b",
+      "L3a",
+      "L3b"
+    ],
+    "has_manifest": true
+  },
+  {
+    "attestation": "0x59f5f10ffdab371430c3e7c16740bace580207e683c110c171aafae349a0458b",
+    "team_name": "Jampy Milestone 1",
+    "report_url": "https://fuzz.jamtoaster.network/api/suites/4e965677a009a24889f78265cd675203/report.zip",
+    "expected_sha256": "0x04bf5960ac1ddf10bad7511f2f428127ff7bffc75437ae8b64004d5bb89208b5",
+    "downloaded_at": "2026-06-13T14:30:11",
+    "source": "notion",
+    "sha256": "0x04bf5960ac1ddf10bad7511f2f428127ff7bffc75437ae8b64004d5bb89208b5",
+    "zip_size": 77557474,
+    "file_count": 34,
     "lane_dirs": [
       "L2a",
       "L2b",
@@ -246,6 +282,24 @@
     "sha256": "0x6461636f2d401f8707e6a3146c24361d070f06529b83ef7f3c70a4cc80060035",
     "zip_size": 97123231,
     "file_count": 40,
+    "lane_dirs": [
+      "L2a",
+      "L2b",
+      "L3a",
+      "L3b"
+    ],
+    "has_manifest": true
+  },
+  {
+    "attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
+    "team_name": "TSJAM M1 Delivery",
+    "report_url": "https://fuzz.jamtoaster.network/api/suites/a11652c85b98ca1838cdb77dae6a735d/report.zip",
+    "expected_sha256": "0x1b5d8c3d9eff6dd27fdc8b1d92ec4ed0567b6482121c385fb61bf99e10b65dbd",
+    "downloaded_at": "2026-06-13T14:30:29",
+    "source": "notion",
+    "sha256": "0x1b5d8c3d9eff6dd27fdc8b1d92ec4ed0567b6482121c385fb61bf99e10b65dbd",
+    "zip_size": 68234142,
+    "file_count": 38,
     "lane_dirs": [
       "L2a",
       "L2b",

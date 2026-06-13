@@ -1,30 +1,16 @@
 [
   {
-    "attestation": "0x59f5f10ffdab371430c3e7c16740bace580207e683c110c171aafae349a0458b",
-    "team_name": "Jampy",
-    "report_url": "https://fuzz.jamtoaster.network/api/suites/4e965677a009a24889f78265cd675203/report.zip",
-    "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='fuzz.jamtoaster.network', port=443): Max retries exceeded with url: /api/suites/4e965677a009a24889f78265cd675203/report.zip (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))\"))",
-    "time": "2026-06-07T11:21:07"
-  },
-  {
-    "attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
-    "team_name": "TSJAM",
-    "report_url": "https://fuzz.jamtoaster.network/api/suites/a11652c85b98ca1838cdb77dae6a735d/report.zip",
-    "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='fuzz.jamtoaster.network', port=443): Max retries exceeded with url: /api/suites/a11652c85b98ca1838cdb77dae6a735d/report.zip (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))\"))",
-    "time": "2026-06-07T11:21:07"
+    "attestation": "0x61208c509c5b0ce9a7dc3f3a9635e1412cf155578c869c46d909c36b77f53e72",
+    "team_name": "17",
+    "report_url": "https://fuzz.jamtoaster.network/api/suites/12720d0f042010039c7975d7004764d1/report.zip",
+    "error": "HTTP 404",
+    "time": "2026-06-13T14:29:50"
   },
   {
     "attestation": "0x6f26e8e2dd65f19e3717cdb8c1325aad04302642a04555441882976b337a6c01",
-    "team_name": "Jamixir",
+    "team_name": "Jamixir M1 Delivery",
     "report_url": "https://fuzz.jamtoaster.network/api/suites/14faa0beeec4e9c2138b33c374bd6584/report.zip",
-    "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='fuzz.jamtoaster.network', port=443): Max retries exceeded with url: /api/suites/14faa0beeec4e9c2138b33c374bd6584/report.zip (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))\"))",
-    "time": "2026-06-07T11:21:07"
-  },
-  {
-    "attestation": "0x61208c509c5b0ce9a7dc3f3a9635e1412cf155578c869c46d909c36b77f53e72",
-    "team_name": "JamBrains",
-    "report_url": "https://fuzz.jamtoaster.network/api/suites/12720d0f042010039c7975d7004764d1/report.zip",
-    "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='fuzz.jamtoaster.network', port=443): Max retries exceeded with url: /api/suites/12720d0f042010039c7975d7004764d1/report.zip (Caused by ProxyError('Unable to connect to proxy', FileNotFoundError(2, 'No such file or directory')))\"))",
-    "time": "2026-06-07T11:21:25"
+    "error": "HTTP 404",
+    "time": "2026-06-13T14:29:58"
   }
 ]

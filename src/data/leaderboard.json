@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T19:47:39",
+  "generated_at": "2026-06-13T14:30:30",
   "methodology_version": 1,
   "lanes": [
     "L2a",
@@ -682,6 +682,57 @@
       "rank": 13
     },
     {
+      "team_id": "0x543671abfba16b8a53b2033c06163dbab03aa64590271772111d8b3664768e7c",
+      "team_name": "jam4s",
+      "client_name": "jam4s",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x70bcb397b0e6614c1de27691f6dcfe0bd50992e31db09ae061b58efb4f2878a2",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 279.1013,
+      "metrics": {
+        "geo_p50": 212.28,
+        "geo_p90": 260.0,
+        "geo_p99": 317.39,
+        "total_imported": 566676
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 309.567,
+          "p90": 380.779,
+          "p99": 479.771,
+          "imported": 335848,
+          "import_ratio": 0.335848
+        },
+        "L2b": {
+          "p50": 465.551,
+          "p90": 609.842,
+          "p99": 755.843,
+          "imported": 31882,
+          "import_ratio": 0.31882
+        },
+        "L3a": {
+          "p50": 90.8,
+          "p90": 109.759,
+          "p99": 135.147,
+          "imported": 98946,
+          "import_ratio": 0.98946
+        },
+        "L3b": {
+          "p50": 155.164,
+          "p90": 179.306,
+          "p99": 207.055,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 14
+    },
+    {
       "team_id": "0x8c00226393a2a05d5d65bf7590e3c091feb897f8303a7de52cd637106dee2b37",
       "team_name": "JamForge",
       "client_name": "JamForge",
@@ -730,7 +781,58 @@
         }
       },
       "error_lanes": [],
-      "rank": 14
+      "rank": 15
+    },
+    {
+      "team_id": "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f",
+      "team_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "client_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 392.1689,
+      "metrics": {
+        "geo_p50": 297.68,
+        "geo_p90": 409.83,
+        "geo_p99": 513.94,
+        "total_imported": 566110
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 404.704,
+          "p90": 660.644,
+          "p99": 880.435,
+          "imported": 335648,
+          "import_ratio": 0.335648
+        },
+        "L2b": {
+          "p50": 2959.339,
+          "p90": 4330.56,
+          "p99": 5954.447,
+          "imported": 31643,
+          "import_ratio": 0.31643
+        },
+        "L3a": {
+          "p50": 79.761,
+          "p90": 104.201,
+          "p99": 130.662,
+          "imported": 98819,
+          "import_ratio": 0.98819
+        },
+        "L3b": {
+          "p50": 82.206,
+          "p90": 94.634,
+          "p99": 101.85,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 16
     },
     {
       "team_id": "0xc6d054f89721795d9ca72e95a3dd476820cd380f577fd9ab4b835a510e75800a",
@@ -781,7 +883,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 15
+      "rank": 17
     },
     {
       "team_id": "0x32f20e693fc2129fa0b8787e77087ba0797eeae4639296ff9db6360e6460a136",
@@ -832,7 +934,58 @@
         }
       },
       "error_lanes": [],
-      "rank": 16
+      "rank": 18
+    },
+    {
+      "team_id": "0xf438d9b7ede483d500c3b9b32a40943233c27c61c6b8d5e92dc1e16ff2da6310",
+      "team_name": "jampy",
+      "client_name": "jampy",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x59f5f10ffdab371430c3e7c16740bace580207e683c110c171aafae349a0458b",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 788.2262,
+      "metrics": {
+        "geo_p50": 369.4,
+        "geo_p90": 551.68,
+        "geo_p99": 1415.12,
+        "total_imported": 566598
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 269.888,
+          "p90": 341.565,
+          "p99": 504.194,
+          "imported": 335764,
+          "import_ratio": 0.335764
+        },
+        "L2b": {
+          "p50": 781.422,
+          "p90": 1661.177,
+          "p99": 32872.154,
+          "imported": 31742,
+          "import_ratio": 0.31742
+        },
+        "L3a": {
+          "p50": 230.039,
+          "p90": 309.589,
+          "p99": 394.066,
+          "imported": 99092,
+          "import_ratio": 0.99092
+        },
+        "L3b": {
+          "p50": 383.807,
+          "p90": 527.321,
+          "p99": 614.02,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 19
     },
     {
       "team_id": "0x866d1837675e6c261632fc872c66e779df05bca99fed82db1f5cc4c329beb520",
@@ -883,7 +1036,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 17
+      "rank": 20
     },
     {
       "team_id": "0xcefbf7cfe1ffa3a8eb3af4bbf220281a230b3d075bd9842c9cae84b6e1fc5b13",
@@ -934,7 +1087,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 18
+      "rank": 21
     }
   ],
   "complete_teams": [
@@ -1602,6 +1755,57 @@
       "rank": 13
     },
     {
+      "team_id": "0x543671abfba16b8a53b2033c06163dbab03aa64590271772111d8b3664768e7c",
+      "team_name": "jam4s",
+      "client_name": "jam4s",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x70bcb397b0e6614c1de27691f6dcfe0bd50992e31db09ae061b58efb4f2878a2",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 279.1013,
+      "metrics": {
+        "geo_p50": 212.28,
+        "geo_p90": 260.0,
+        "geo_p99": 317.39,
+        "total_imported": 566676
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 309.567,
+          "p90": 380.779,
+          "p99": 479.771,
+          "imported": 335848,
+          "import_ratio": 0.335848
+        },
+        "L2b": {
+          "p50": 465.551,
+          "p90": 609.842,
+          "p99": 755.843,
+          "imported": 31882,
+          "import_ratio": 0.31882
+        },
+        "L3a": {
+          "p50": 90.8,
+          "p90": 109.759,
+          "p99": 135.147,
+          "imported": 98946,
+          "import_ratio": 0.98946
+        },
+        "L3b": {
+          "p50": 155.164,
+          "p90": 179.306,
+          "p99": 207.055,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 14
+    },
+    {
       "team_id": "0x8c00226393a2a05d5d65bf7590e3c091feb897f8303a7de52cd637106dee2b37",
       "team_name": "JamForge",
       "client_name": "JamForge",
@@ -1650,7 +1854,58 @@
         }
       },
       "error_lanes": [],
-      "rank": 14
+      "rank": 15
+    },
+    {
+      "team_id": "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f",
+      "team_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "client_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 392.1689,
+      "metrics": {
+        "geo_p50": 297.68,
+        "geo_p90": 409.83,
+        "geo_p99": 513.94,
+        "total_imported": 566110
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 404.704,
+          "p90": 660.644,
+          "p99": 880.435,
+          "imported": 335648,
+          "import_ratio": 0.335648
+        },
+        "L2b": {
+          "p50": 2959.339,
+          "p90": 4330.56,
+          "p99": 5954.447,
+          "imported": 31643,
+          "import_ratio": 0.31643
+        },
+        "L3a": {
+          "p50": 79.761,
+          "p90": 104.201,
+          "p99": 130.662,
+          "imported": 98819,
+          "import_ratio": 0.98819
+        },
+        "L3b": {
+          "p50": 82.206,
+          "p90": 94.634,
+          "p99": 101.85,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 16
     },
     {
       "team_id": "0xc6d054f89721795d9ca72e95a3dd476820cd380f577fd9ab4b835a510e75800a",
@@ -1701,7 +1956,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 15
+      "rank": 17
     },
     {
       "team_id": "0x32f20e693fc2129fa0b8787e77087ba0797eeae4639296ff9db6360e6460a136",
@@ -1752,7 +2007,58 @@
         }
       },
       "error_lanes": [],
-      "rank": 16
+      "rank": 18
+    },
+    {
+      "team_id": "0xf438d9b7ede483d500c3b9b32a40943233c27c61c6b8d5e92dc1e16ff2da6310",
+      "team_name": "jampy",
+      "client_name": "jampy",
+      "client_version": "0.7.2",
+      "jam_version": "0.7.2",
+      "language": "",
+      "language_color": "",
+      "latest_attestation": "0x59f5f10ffdab371430c3e7c16740bace580207e683c110c171aafae349a0458b",
+      "completed_count": 4,
+      "total_lanes": 4,
+      "score": 788.2262,
+      "metrics": {
+        "geo_p50": 369.4,
+        "geo_p90": 551.68,
+        "geo_p99": 1415.12,
+        "total_imported": 566598
+      },
+      "lanes": {
+        "L2a": {
+          "p50": 269.888,
+          "p90": 341.565,
+          "p99": 504.194,
+          "imported": 335764,
+          "import_ratio": 0.335764
+        },
+        "L2b": {
+          "p50": 781.422,
+          "p90": 1661.177,
+          "p99": 32872.154,
+          "imported": 31742,
+          "import_ratio": 0.31742
+        },
+        "L3a": {
+          "p50": 230.039,
+          "p90": 309.589,
+          "p99": 394.066,
+          "imported": 99092,
+          "import_ratio": 0.99092
+        },
+        "L3b": {
+          "p50": 383.807,
+          "p90": 527.321,
+          "p99": 614.02,
+          "imported": 100000,
+          "import_ratio": 1.0
+        }
+      },
+      "error_lanes": [],
+      "rank": 19
     },
     {
       "team_id": "0x866d1837675e6c261632fc872c66e779df05bca99fed82db1f5cc4c329beb520",
@@ -1803,7 +2109,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 17
+      "rank": 20
     },
     {
       "team_id": "0xcefbf7cfe1ffa3a8eb3af4bbf220281a230b3d075bd9842c9cae84b6e1fc5b13",
@@ -1854,7 +2160,7 @@
         }
       },
       "error_lanes": [],
-      "rank": 18
+      "rank": 21
     }
   ],
   "partial_teams": [],
