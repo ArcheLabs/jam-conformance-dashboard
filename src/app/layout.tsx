@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAM Conformance Performance",
-  description: "Performance benchmarks and conformance testing for JAM protocol implementations",
+  title: "M1 Conformance Evaluation Runtime Statistics",
+  description: "This page summarizes runtime statistics from the M1 conformance tests to help JAM implementations identify targeted optimization opportunities. The data should be treated as reference only and not as strict performance benchmark results.",
   keywords: ["JAM", "blockchain", "performance", "benchmarks", "conformance", "protocol"],
   authors: [{ name: "JAM Conformance Team" }],
   openGraph: {
-    title: "JAM Conformance Performance",
-    description: "Performance benchmarks and conformance testing for JAM protocol implementations",
+    title: "M1 Conformance Evaluation Runtime Statistics",
+    description: "This page summarizes runtime statistics from the M1 conformance tests to help JAM implementations identify targeted optimization opportunities. The data should be treated as reference only and not as strict performance benchmark results.",
     type: "website",
   },
   manifest: "/site.webmanifest",
