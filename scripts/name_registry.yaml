@@ -55,6 +55,13 @@ teams:
     language_color: "#3178c6"
     aliases: ["pbnj-fuzzer-target", "pbnj"]
 
+  "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f":
+    team_name: "tsjam"
+    client_name: "tsjam"
+    language: "TypeScript"
+    language_color: "#3178c6"
+    aliases: ["tsjam", "tsjam-0.7.2-tiny-2ef512ec", "tsjam-0.7.2-full-2ef512ec"]
+
   "0x284f936995ce2a5e402189e2c9d58225e225101e753faad7bcf1455df10a9419":
     team_name: "VinWolf"
     client_name: "VinWolf"

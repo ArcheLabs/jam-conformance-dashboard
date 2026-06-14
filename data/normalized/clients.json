@@ -114,10 +114,10 @@
   {
     "team_id": "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f",
     "team_h160": "0xf8daba0dfe25b6125c4eed378ea2668daa0f56e4",
-    "team_name": "tsjam-0.7.2-tiny-2ef512ec",
-    "client_name": "tsjam-0.7.2-tiny-2ef512ec",
-    "language": "",
-    "language_color": ""
+    "team_name": "tsjam",
+    "client_name": "tsjam",
+    "language": "TypeScript",
+    "language_color": "#3178c6"
   },
   {
     "team_id": "0xc6d054f89721795d9ca72e95a3dd476820cd380f577fd9ab4b835a510e75800a",

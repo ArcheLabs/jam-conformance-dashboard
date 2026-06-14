@@ -14,7 +14,7 @@ export const APP_CONFIG = {
   externalLinks: {
     jamConformance: 'https://github.com/davxy/jam-conformance',
     graypaperClients: 'https://graypaper.com/clients/',
-    viblyNetwork: 'https://vibly.network/',
+    archeLabs: 'https://archelabs.org/',
   },
 
   paths: {

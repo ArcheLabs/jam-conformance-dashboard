@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T04:16:03",
+  "generated_at": "2026-06-14T14:57:56",
   "methodology_version": 1,
   "lanes": [
     "L2a",
@@ -63,7 +63,7 @@
           "p90": 15.515,
           "p99": 16.378,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -114,7 +114,7 @@
           "p90": 8.483,
           "p99": 10.207,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -165,7 +165,7 @@
           "p90": 19.759,
           "p99": 22.662,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -216,7 +216,7 @@
           "p90": 44.667,
           "p99": 53.831,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -267,7 +267,7 @@
           "p90": 16.337,
           "p99": 25.4,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -318,7 +318,7 @@
           "p90": 14.831,
           "p99": 16.713,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -369,7 +369,7 @@
           "p90": 24.783,
           "p99": 28.446,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -420,7 +420,7 @@
           "p90": 13.088,
           "p99": 270.618,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -471,7 +471,7 @@
           "p90": 87.407,
           "p99": 146.735,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -522,7 +522,7 @@
           "p90": 57.955,
           "p99": 64.89,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -573,7 +573,7 @@
           "p90": 137.766,
           "p99": 178.413,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -624,7 +624,7 @@
           "p90": 160.244,
           "p99": 281.873,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -675,7 +675,7 @@
           "p90": 357.36,
           "p99": 403.14,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -726,7 +726,7 @@
           "p90": 179.306,
           "p99": 207.055,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -777,7 +777,7 @@
           "p90": 155.933,
           "p99": 187.109,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -785,12 +785,12 @@
     },
     {
       "team_id": "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f",
-      "team_name": "tsjam-0.7.2-tiny-2ef512ec",
-      "client_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "team_name": "tsjam",
+      "client_name": "tsjam",
       "client_version": "0.7.2",
       "jam_version": "0.7.2",
-      "language": "",
-      "language_color": "",
+      "language": "TypeScript",
+      "language_color": "#3178c6",
       "latest_attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
       "completed_count": 4,
       "total_lanes": 4,
@@ -828,7 +828,7 @@
           "p90": 94.634,
           "p99": 101.85,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -879,7 +879,7 @@
           "p90": 412.787,
           "p99": 626.753,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -930,7 +930,7 @@
           "p90": 1383.413,
           "p99": 1484.008,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -981,7 +981,7 @@
           "p90": 527.321,
           "p99": 614.02,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1032,7 +1032,7 @@
           "p90": 211.359,
           "p99": 294.228,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1083,7 +1083,7 @@
           "p90": 503.046,
           "p99": 701.819,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1136,7 +1136,7 @@
           "p90": 15.515,
           "p99": 16.378,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1187,7 +1187,7 @@
           "p90": 8.483,
           "p99": 10.207,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1238,7 +1238,7 @@
           "p90": 19.759,
           "p99": 22.662,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1289,7 +1289,7 @@
           "p90": 44.667,
           "p99": 53.831,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1340,7 +1340,7 @@
           "p90": 16.337,
           "p99": 25.4,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1391,7 +1391,7 @@
           "p90": 14.831,
           "p99": 16.713,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1442,7 +1442,7 @@
           "p90": 24.783,
           "p99": 28.446,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1493,7 +1493,7 @@
           "p90": 13.088,
           "p99": 270.618,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1544,7 +1544,7 @@
           "p90": 87.407,
           "p99": 146.735,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1595,7 +1595,7 @@
           "p90": 57.955,
           "p99": 64.89,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1646,7 +1646,7 @@
           "p90": 137.766,
           "p99": 178.413,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1697,7 +1697,7 @@
           "p90": 160.244,
           "p99": 281.873,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1748,7 +1748,7 @@
           "p90": 357.36,
           "p99": 403.14,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1799,7 +1799,7 @@
           "p90": 179.306,
           "p99": 207.055,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1850,7 +1850,7 @@
           "p90": 155.933,
           "p99": 187.109,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1858,12 +1858,12 @@
     },
     {
       "team_id": "0xb4ac19c9a723477c0b31ef41dd0cfd9539a3a8d763e6a6c4c96eba6eba5e4d7f",
-      "team_name": "tsjam-0.7.2-tiny-2ef512ec",
-      "client_name": "tsjam-0.7.2-tiny-2ef512ec",
+      "team_name": "tsjam",
+      "client_name": "tsjam",
       "client_version": "0.7.2",
       "jam_version": "0.7.2",
-      "language": "",
-      "language_color": "",
+      "language": "TypeScript",
+      "language_color": "#3178c6",
       "latest_attestation": "0x450f62ab3d01495853e1fa59da77187308275dd73c58dcce4e3482074bb11bb4",
       "completed_count": 4,
       "total_lanes": 4,
@@ -1901,7 +1901,7 @@
           "p90": 94.634,
           "p99": 101.85,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -1952,7 +1952,7 @@
           "p90": 412.787,
           "p99": 626.753,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -2003,7 +2003,7 @@
           "p90": 1383.413,
           "p99": 1484.008,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -2054,7 +2054,7 @@
           "p90": 527.321,
           "p99": 614.02,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -2105,7 +2105,7 @@
           "p90": 211.359,
           "p99": 294.228,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],
@@ -2156,7 +2156,7 @@
           "p90": 503.046,
           "p99": 701.819,
           "imported": 100000,
-          "import_ratio": 1.0
+          "import_ratio": 1
         }
       },
       "error_lanes": [],

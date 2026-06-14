@@ -144,12 +144,12 @@ export default function Home() {
               </a>
               {' | '}
               <a
-                href={APP_CONFIG.externalLinks.viblyNetwork}
+                href={APP_CONFIG.externalLinks.archeLabs}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                Vibly Network
+                Arche Labs
               </a>
             </p>
           </div>

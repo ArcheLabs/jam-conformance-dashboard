@@ -7,10 +7,10 @@
     "build": "next build",
     "build:full": "npm run update-all-data && next build",
     "start": "next start",
-    "collect": "python scripts/collect_evaluations.py --refresh-notion --no-download",
-    "normalize": "python scripts/normalize_reports.py",
-    "build-data": "python scripts/build_frontend_data.py",
-    "report": "python scripts/report_summary.py",
+    "collect": "node scripts/run_python.js scripts/collect_evaluations.py --refresh-notion --no-download",
+    "normalize": "node scripts/run_python.js scripts/normalize_reports.py",
+    "build-data": "node scripts/run_python.js scripts/build_frontend_data.py",
+    "report": "node scripts/run_python.js scripts/report_summary.py",
     "update-all-data": "npm run collect && npm run normalize && npm run build-data && npm run report"
   },
   "dependencies": {
