@@ -5,7 +5,7 @@ import { LeaderboardTable } from '@/components/LeaderboardTable';
 import { BenchmarkTabs } from '@/components/BenchmarkTabs';
 import { MethodologyExplainer } from '@/components/MethodologyExplainer';
 import { PerformanceChartEnhanced } from '@/components/PerformanceChartEnhanced';
-import { BarChart3 } from 'lucide-react';
+import { Info, BarChart3 } from 'lucide-react';
 import leaderboardData from '@/data/leaderboard.json';
 import { APP_CONFIG } from '@/config';
 import { LeaderboardData } from '@/types/performance';
@@ -40,9 +40,6 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tighter">
                 M1 Conformance Evaluation Runtime Statistics
               </h1>
-              <p className="max-w-4xl text-sm md:text-base text-slate-400 font-light leading-6">
-                This page summarizes runtime statistics from the M1 conformance tests to help JAM implementations identify targeted optimization opportunities. The data should be treated as reference only and not as strict performance benchmark results.
-              </p>
             </div>
           </div>
 
@@ -56,9 +53,21 @@ export default function Home() {
 
           {/* Overview: Info box + Chart */}
           {!currentTab && (
-            <div className="mb-12">
-              <PerformanceChartEnhanced teams={data.teams} baselineTeam={baselineTeam} />
-            </div>
+            <>
+              <div className="mb-8 p-4 bg-white/5 border border-white/10 rounded-lg">
+                <div className="flex items-start gap-3">
+                  <Info className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <div className="text-sm text-slate-300">
+                    <p className="font-semibold text-white mb-1">Important Note</p>
+                    <p>This page summarizes runtime statistics from the M1 conformance tests to help JAM implementations identify targeted optimization opportunities. The data should be treated as reference only and not as strict performance benchmark results.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-12">
+                <PerformanceChartEnhanced teams={data.teams} baselineTeam={baselineTeam} />
+              </div>
+            </>
           )}
 
           {/* Lane view: description + chart */}
