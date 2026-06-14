@@ -4,13 +4,13 @@
     "team_name": "17",
     "report_url": "https://fuzz.jamtoaster.network/api/suites/12720d0f042010039c7975d7004764d1/report.zip",
     "error": "HTTP 404",
-    "time": "2026-06-14T04:07:56"
+    "time": "2026-06-14T04:16:03"
   },
   {
     "attestation": "0x6f26e8e2dd65f19e3717cdb8c1325aad04302642a04555441882976b337a6c01",
     "team_name": "Jamixir M1 Delivery",
     "report_url": "https://fuzz.jamtoaster.network/api/suites/14faa0beeec4e9c2138b33c374bd6584/report.zip",
     "error": "HTTP 404",
-    "time": "2026-06-14T04:07:57"
+    "time": "2026-06-14T04:16:03"
   }
 ]
