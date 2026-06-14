@@ -181,7 +181,7 @@
   },
   {
     "attestation": "0x6aba90b86754d1f57be792e8ae202169d6286aded664d801f3f032c69c910df2",
-    "team_name": "JamZig⚡ Milestone 1",
+    "team_name": "JamZig Milestone 1",
     "language": "Zig",
     "status": "PASSED",
     "attestation_url": "https://fuzz.jamtoaster.network/attestation/0x6aba90b86754d1f57be792e8ae202169d6286aded664d801f3f032c69c910df2",
